@@ -18,7 +18,7 @@ export class AppController {
     ];
 
     return {
-      titulo: 'AppWeb com NestJs',
+      titulo: 'My First App',
       horaAgora: new Date().toLocaleString('pt-BR'),
       listaPessoas: pessoas,
     };
