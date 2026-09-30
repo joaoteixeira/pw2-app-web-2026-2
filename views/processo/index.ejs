@@ -17,9 +17,7 @@
                 <td><%= processo.numero %></td>
                 <td><%= dateFormat(processo.data) %></td>
                 <td><%= processo.interessado %></td>
-                <td>
-                    <span class="badge text-bg-secondary"><%= processo.situacao %></span>
-                </td>
+                <td><%- _h.rotuloSituacao(processo.situacao) %></td>
             </tr>
         <% }) %> 
     </tbody>

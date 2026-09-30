@@ -1,6 +1,7 @@
 import { Controller, Get, Render } from '@nestjs/common';
 import { Processo } from './processo.entity';
 import { ProcessoService } from './processo.service';
+import { helpers } from './processo.view.helpers';
 
 @Controller('processos')
 export class ProcessoController {
@@ -12,6 +13,6 @@ export class ProcessoController {
     async getAll(): Promise<object> {
         let processos = await this.processoService.findAll(); 
 
-        return { listaProcessos: processos }
+        return { listaProcessos: processos, _h: helpers }
     }
 }
